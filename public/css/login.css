@@ -1,0 +1,164 @@
+/* ==========================================
+   ESTILOS DEFINITIVOS - LOGIN & REGISTER NEÓN
+   ========================================== */
+
+   * {
+    box-sizing: border-box;
+}
+
+body.neon-login-body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d0617;
+    color: #f3e8ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Video de fondo en bucle nativo y directo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1; /* Posicionado al fondo base */
+}
+
+/* Capa de opacidad oscura para proteger la lectura de los formularios */
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 4, 18, 0.65);
+    z-index: 2; /* Encima del video pero debajo de la interfaz */
+    pointer-events: none;
+}
+
+/* Contenedor principal de la tarjeta de inicio de sesión / registro */
+.container {
+    position: relative;
+    z-index: 10; /* Garantiza que esté al frente absoluto */
+}
+
+.neon-card {
+    background: rgba(15, 8, 28, 0.92) !important;
+    border: 1px solid rgba(199, 125, 255, 0.5);
+    border-radius: 14px;
+    box-shadow: 0 0 35px rgba(123, 44, 191, 0.6), inset 0 0 15px rgba(123, 44, 191, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 420px;
+}
+
+.neon-title {
+    color: #ffffff !important;
+    text-shadow: 0 0 12px rgba(199, 125, 255, 0.9), 0 0 25px rgba(123, 44, 191, 0.7);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.neon-label {
+    color: #e2d1ff !important;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.neon-input {
+    background-color: rgba(8, 3, 15, 0.95) !important;
+    border: 1px solid #9d4edd !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    height: 45px;
+    box-shadow: inset 0 0 8px rgba(157, 78, 221, 0.3) !important;
+    transition: all 0.3s ease;
+}
+
+.neon-input:focus {
+    border-color: #e0aaff !important;
+    box-shadow: 0 0 15px rgba(224, 170, 255, 0.8) !important;
+}
+
+.neon-button {
+    background: linear-gradient(135deg, #7b2cbf, #9d4edd) !important;
+    color: #ffffff !important;
+    border: 1px solid #e0aaff !important;
+    border-radius: 8px !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    height: 45px;
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.6);
+    transition: all 0.3s ease;
+}
+
+.neon-button:hover {
+    background: linear-gradient(135deg, #9d4edd, #c77dff) !important;
+    box-shadow: 0 0 30px rgba(224, 170, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+.neon-link {
+    color: #d8b4fe !important;
+    font-weight: 600;
+    text-decoration: none;
+    text-shadow: 0 0 8px rgba(199, 125, 255, 0.5);
+}
+
+.neon-link:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #d8b4fe;
+    font-size: 1.1rem;
+    z-index: 15;
+}
+
+.audio-player-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(15, 8, 28, 0.9);
+    border: 1px solid rgba(199, 125, 255, 0.4);
+    padding: 8px 16px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 20;
+    box-shadow: 0 0 20px rgba(123, 44, 191, 0.4);
+}
+
+.audio-player-container span {
+    font-size: 0.85rem;
+    color: #e2d1ff;
+    font-weight: 600;
+}
+
+.audio-player-container audio {
+    height: 32px;
+    filter: invert(90%) hue-rotate(200deg);
+}
